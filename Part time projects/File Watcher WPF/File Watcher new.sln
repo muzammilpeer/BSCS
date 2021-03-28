@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File Watcher new", "File Watcher new\File Watcher new.csproj", "{AA7A5A81-8F0B-440F-BD82-F7CC11E29DE5}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "File Watcher 0.1", "File Watcher 0.1\File Watcher 0.1.vdproj", "{52E9C761-2379-423F-9C82-E813D24BAE4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA7A5A81-8F0B-440F-BD82-F7CC11E29DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7A5A81-8F0B-440F-BD82-F7CC11E29DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7A5A81-8F0B-440F-BD82-F7CC11E29DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7A5A81-8F0B-440F-BD82-F7CC11E29DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E9C761-2379-423F-9C82-E813D24BAE4D}.Debug|Any CPU.ActiveCfg = Debug
+		{52E9C761-2379-423F-9C82-E813D24BAE4D}.Release|Any CPU.ActiveCfg = Release
+		{52E9C761-2379-423F-9C82-E813D24BAE4D}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

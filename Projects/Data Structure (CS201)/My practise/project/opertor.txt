@@ -1,0 +1,11 @@
+?
+|
+.
+*
+(
+)
+[
+]
+-
+
+sendsms(char* "i am missing you") {if (person=="happy to meet you") return "i also"; else return "hamaray pass falto time nahi hai"; }

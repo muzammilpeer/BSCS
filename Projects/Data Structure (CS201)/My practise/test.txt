@@ -1,0 +1,16 @@
+while (op1<op2)
+{
+if (op1 < 0) and (op1 != op3)
+neg++;
+Else
+pos++;
+op1++;
+}
+
+
+ ORG 100
+ 
+3,3
+123
+123
+123

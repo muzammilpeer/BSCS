@@ -1,0 +1,50 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Apr 18, 2010 at 10:30 AM
+-- Server version: 5.1.36
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `sms_alert`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE IF NOT EXISTS `contact` (
+  `name` varchar(30) NOT NULL,
+  `cell_no` varchar(13) NOT NULL,
+  `design` varchar(30) NOT NULL,
+  PRIMARY KEY (`cell_no`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contact`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employee`
+--
+
+CREATE TABLE IF NOT EXISTS `employee` (
+  `Name` varchar(30) NOT NULL,
+  `emp_no` varchar(20) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  PRIMARY KEY (`emp_no`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee`
+--
+

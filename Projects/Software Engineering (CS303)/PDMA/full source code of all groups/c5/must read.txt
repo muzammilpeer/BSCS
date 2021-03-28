@@ -1,0 +1,25 @@
+Assigned Proviliges
+
+Database Name:vms
+DB password  :saeed
+server       :localhost
+
+Superadmin
+
+UserName:admin	
+Passwoed:saeed
+
+
+administrator:
+
+UserName:administrator	
+Passwoed:administrator
+
+search option only access the administrator.
+
+
+user:
+
+UserName:saeed	
+Passwoed:saeed
+

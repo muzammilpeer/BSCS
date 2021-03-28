@@ -1,0 +1,12 @@
+5 5
+R	A	D	A	R
+Y	E	N	O	P
+E	M	G	M	D
+P	O	G	O	C
+M	E	A	T	R
+
+4
+ROGER
+RADAR
+PONEY
+MGM

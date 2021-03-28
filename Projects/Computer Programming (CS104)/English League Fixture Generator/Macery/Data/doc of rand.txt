@@ -1,0 +1,37 @@
+5
+
+3
+3<>5
+
+4
+4<>3
+4<>5
+
+3
+3<>4
+3==3
+{1}//re-random
+[1] "<>" or "==" 5//comparision multi-comparitor
+{1}//may be re-random
+
+7
+7 "<>" or "==" [1]//comparision multi-comparitor
+{2}//re-random
+7 "<>" or "==" 4//comparision multi-comparitor
+{2}//re-random
+7 "<>" or "==" 3//comparision multi-comparitor
+{2}//re-random
+7 "<>" or "==" 5//comparision multi-comparitor
+
+Note::
+Clash come in last step "7" comparision and re-random
+how to minimize this re-randomization????
+
+Solution:
+
+
+while (do this process until you get check==false;)
+1)make a scan of data.
+2)if you find check==true;(true shows that this element is twice or thrice...) then
+re-randome number; 
+

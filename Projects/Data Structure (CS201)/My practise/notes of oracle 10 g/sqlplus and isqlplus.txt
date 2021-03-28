@@ -1,0 +1,161 @@
+cmd:
+===
+
+sqlplus:to login to oracle database in console application. default user name is "scott" and password "tigger".
+In SQL Plus:
+============
+
+host: to tell which operating system is running. and host is to shift from sql plus to windows temporarily and when we exit we come back to sqlplus.
+define: to tell information about data base names and user name to which i m login and connect in sqlplus.
+connect sys as sysdba: to connect with another user name.{sys is user name,sysdba is priviledge(like root) and is syspow}
+quit: to exit
+
+Note:
+=====
+in oracle every table is in schema  and table is tablespace.
+
+Data Types(few):
+================
+
+number(3) : integer upto 3 length
+number(2,2) : inter upto 2 length and 2 percision {e.g:2.22}
+varchar2(10) : 'smith' {but it safe memory if the length of the chars are less then define.
+char(10) : 'jors' {its use 10 char space not efficent than varchar2}
+date : for stamp of time {date + time{hours:mintues:seconds}
+timestamp : for stamp of time {date + time{hours:mintues:seconds:miliseconds}
+LOB : for large object
+BLOB : binary large object
+CLOB : character large object
+.....................
+
+cmd:
+----
+select table_name from user_tables; : to select all table in particular db{"user_tables" is db}
+desc emp : to describe "emp" table data str.+types.
+
+select empno,enmae,job,hiredate,sal 
+from emp 
+order by 2; :// selected data items are being displayed. from "emp" table of order 2(pair).
+
+set pagesize 200 : to set display size of contents on a page.
+
+Note:
+buffer can store only on statement{if on single line}
+
+/ : call buffer mean call the first line of previous command.only
+l or list : to show the whole previous line of command you entered last time with option which line you have to select .
+
+Note: 
+* {shows that over current line number}
+
+c/empno/deptno : if we want to change empno field by deptno in buffer we use it. where "c" stands for change
+
+===========================================================================================
+
+SQL Stands for Structure Query Language.
+
+Note: 
+SQL Statements stores in buffer while "SQL PLUS" do not.
+SQLPLUS statements are only worked in sessions when we exit it forget. and sqlplus is use for formating data.
+
+alter session set nls_date_format = 'mm/dd/yyyy/; : it anylse to new date format
+col sal format $999,999.00 : format the col of "sal" like "999,999.00"
+col ename heading 'Employee|Name' : to replace the heading name ."|"(pipe character) is use for two line split.
+ 
+set underline '=' : to change dash(below the headings walay.) to "="
+a  ,comm : "a" stands for append in buffer selected line. two space must
+col comm like sal heading "Commission" :  is to make like "comm" "sal" and change its heading name.
+col job format a15 : make wider the "job" col.
+col comm clear : clear the "comm" col mean remove much space.become closer.
+clear columns : to clear all columns (all becomes closer toeacher)
+save filename.sql : to save buffer into a file(its store in default folder from wherer sql plus is runing) we can change its path by typing full path to save.
+@filename : to load file of buffer stored.
+
+Note:
+if i want to change entire select row in buffer then , "linenumber statement" e.g: 3 where job = 'PRESIDENT'
+
+spool filename.txt : spool is use for both buffer in memory and for writing the displaying content into file and its write the content in the file spool is close by "spool off"
+spool off : to close spool 
+
+Note: 
+we can append multicontent in old file by using this command  "spool filename.txt append".
+
+ed : launch editor for editing data in buffer by using buffer file.
+define _editor : to tell which editor is default.
+define _editor=path\editor.exe : to change default editor.
+c/PRESIDIENT/&p : change "PRESIDENT" value by "&p" its will then take new value by entering.
+3 where sal > &&x and comm > &&x : line 3(take change two col values,using two "&&")
+undefine x : to undefine that variable
+
+example of text editing in sql file of buffer(dept_changes.sql):
+==============================================
+col ename format a12 heading "Employee|Name"
+col sal format $999,999.00 heading "salary"
+col comm like sal heading "commission"
+select empno, job, sal, comm
+form emp
+/
+prompt "your department is getting a fat of 50% rise!"
+accept d prompt "what is your department number?"
+update emp 
+set sal = sal * 1.5
+where deptno = &&d
+/
+delete from emp
+where deptno = &&d
+and job = 'MANAGET'
+/
+select empno, ename, job, sal, comm
+from emp
+/
+
+==================================================
+Note:
+"accept" is use for store data in "d" variable. and prompt for takeing input.
+
+
+select table_name from all_tables; : to display all tables name in our data base
+set pause on : to display all tables in one by one page.(sepearte)
+host set sqlpath : too tell the enviorment variable of os for sqlplus
+
+Note:
+login.sql and glogin.sql is the file that effect each user.(its initializing file.)we can modify it.
+help index : to show all sqlplus command
+help command : to show manual of that command
+ttitle "Top of my Page" : top title of the page
+btitle "Bottom of my page" : bottom title of the page
+password or passw : to change the password.
+---------------------------------------------------------[\SQLPLUS]---------------------------------------------------
+
+ISQL PLUS:
+==========
+cmd:
+====
+isqlplusctl start : to start isqlplus services and use "stop" to stop services.
+browser:
+========
+http://localhost:5560/isqlplus/
+
+Note:
+isqlplus have more than one lines in buffer...thats good.
+to change the web port number : 
+cmd -> cd c:\oracle2\product\10.2.0\db_1\oc4j\j2ee\isqlplus\config
+notepad http-web-site.xml
+then find port "5560" and replace it by other port.
+
+To Create SQL-PLUS User Accounts:(sql plus)
+cmd:
+====
+
+cd C:\oracle\product\10.2.0\db_1\oc4j\j2ee\isqlplus\application-deployments\isqlplus
+
+%java_home%\bin\java -Djava.security.properties=%oracle_home%\oc4j\j2ee\home\config\jazn.security.props -jar %oracle_home%\oc4j\j2ee\home\jazn.jar -user "iSQL*Plus DBA/admin" -password welcome -shell
+or 
+C:\oracle\product\10.2.0\db_1\jdk\bin\java -Djava.security.properties=c:oracle\product\10.2.0\db_1\oc4j\j2ee\home\config\jazn.security.props -jar c:oracle\product\10.2.0\db_1\oc4j\j2ee\home\jazn.jar -user "iSQL*Plus DBA/admin" -password Micro12 -shell
+
+listuser "iSQL*Plus DBA" : to show all active user
+adduser "iSQL*Plus DBA" {username} {password} : to add user with passowrd
+grantrole webDba "iSQL*Plus DBA" {username} : to grant prviledges to the user webbda
+
+
+TIME : 29:11

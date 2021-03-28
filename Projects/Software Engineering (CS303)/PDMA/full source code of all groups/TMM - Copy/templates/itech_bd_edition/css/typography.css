@@ -1,0 +1,46 @@
+/* Typhography  */
+* {
+margin: 0;
+padding: 0;
+}
+h1,h2,h3,h4,h5,h6,p,blockquote,form,label,ul,ol,dl,filedset,address {
+margin: 8px 0;
+}
+a:link, a:visited {
+text-decoration: underline;
+color: fff;
+}
+a:hover {
+text-decoration: none;
+color: fff;
+}
+strong, a:visited, a:link {
+color: #333;
+}
+
+
+li,dd {
+margin-left: 16px;
+}
+filedset {
+padding: 8px;
+}
+body {
+font-size: 76%;
+font-family: verdana, Arial, Helvetica, sans-serif;
+line-height: 22px;
+}
+
+#content60 a:link, #content60 a:visited, #content80 a:link, #content80 a:visited, #content100 a:link, #content100 a:visited {
+color: #000;
+}
+
+
+#footer, .small, .createdate, .modifydate, .mosiamge_caption {
+font: 12px Arial, Helvetica, sans-serif;
+color: #999;
+} 
+
+.moduletable fieldset {
+	border: none;
+}

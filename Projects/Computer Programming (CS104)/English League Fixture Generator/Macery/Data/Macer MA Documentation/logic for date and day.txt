@@ -1,0 +1,24 @@
+1)generate 2 number mod by 5// FOR number of matches in week in different days.
+2)get current date
+3)geneate 1 number mod by 5// for low priroty of week day select the day.
+4)now combine the date and day like this(current date+day)for first week day match.
+e.g:20 may 2008,tuesday ==number of matches are geneated by 1st step 3 number choose one of them for this day match.
+and then add 2nd random number in date that is geneated in 1st step
+oh no
+sorry
+you subtract
+in real
+like this 20+6 for sat match
+and +1 for sunday match
+now you have one week match schedule
+for next weeks you just update the date by making date static
+and adding first rand() geneated number in 1st step
+thats all
+but here is a logic
+for first rand() number generated in 1st step that is we compare all these 3 number and check which is smaller than all then we choose it for 1st rand() number.
+b/c in real case we see that some matches are specials
+so the oneday have less match will be that
+
+22 		date	true
+thursday 		day 	false	dy=weekofday+number; if (dy>7) then dy/7; 
+2008 		year

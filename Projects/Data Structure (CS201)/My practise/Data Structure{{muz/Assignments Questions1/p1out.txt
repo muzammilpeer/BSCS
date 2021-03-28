@@ -1,0 +1,56 @@
+RectangularBox 9 4 66 22 4 5 436 440
+Circle 5 6 8 201.062 0
+Sphere 3 4 6 7 615.752 1436.76
+Circle 3 6 7 153.938 0
+Rectangle 2 5 7 8 56 0
+RectangularBox 2 5 7 8 5 4 184 160
+Sphere 7 4 6 8 804.248 2144.66
+RectangularBox 9 4 66 22 4 5 436 440
+Circle 5 6 8 201.062 0
+Sphere 3 4 6 7 615.752 1436.76
+Circle 3 6 7 153.938 0
+Rectangle 2 5 7 8 56 0
+RectangularBox 2 5 7 8 5 4 184 160
+Sphere 7 4 6 8 804.248 2144.66
+RectangularBox 9 4 66 22 4 5 436 440
+Circle 5 6 8 201.062 0
+Sphere 3 4 6 7 615.752 1436.76
+Circle 3 6 7 153.938 0
+Rectangle 2 5 7 8 56 0
+RectangularBox 2 5 7 8 5 4 184 160
+Sphere 7 4 6 8 804.248 2144.66
+RectangularBox 9 4 66 22 4 5 436 440
+Circle 5 6 8 201.062 0
+Sphere 3 4 6 7 615.752 1436.76
+Circle 3 6 7 153.938 0
+Rectangle 2 5 7 8 56 0
+RectangularBox 2 5 7 8 5 4 184 160
+Sphere 7 4 6 8 804.248 2144.66
+RectangularBox 9 4 66 22 4 5 436 440
+Circle 5 6 8 201.062 0
+Sphere 3 4 6 7 615.752 1436.76
+Circle 3 6 7 153.938 0
+Rectangle 2 5 7 8 56 0
+RectangularBox 2 5 7 8 5 4 184 160
+Sphere 7 4 6 8 804.248 2144.66
+RectangularBox 9 4 66 22 4 5 436 440
+Circle 5 6 8 201.062 0
+Sphere 3 4 6 7 615.752 1436.76
+Circle 3 6 7 153.938 0
+Rectangle 2 5 7 8 56 0
+RectangularBox 2 5 7 8 5 4 184 160
+Sphere 7 4 6 8 804.248 2144.66
+RectangularBox 9 4 66 22 4 5 436 440
+Circle 5 6 8 201.062 0
+Sphere 3 4 6 7 615.752 1436.76
+Circle 3 6 7 153.938 0
+Rectangle 2 5 7 8 56 0
+RectangularBox 2 5 7 8 5 4 184 160
+Sphere 7 4 6 8 804.248 2144.66
+RectangularBox 9 4 66 22 4 5 436 440
+Circle 5 6 8 201.062 0
+Sphere 3 4 6 7 615.752 1436.76
+Circle 3 6 7 153.938 0
+Rectangle 2 5 7 8 56 0
+RectangularBox 2 5 7 8 5 4 184 160
+Sphere 7 4 6 8 804.248 2144.66

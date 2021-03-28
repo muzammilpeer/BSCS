@@ -1,0 +1,95 @@
+instance:
+is the collection of background process and memory strtucture using type in database;
+database:
+is the collection of files that contain your data.
+oracle database file extension:".dbf" binary file
+RAC(real application clusters)
+commands:
+=========
+show parameter db_name or show parameter instance_name: to show database name 
+shwo parameter db_block_size : to block size of our oracle.(oracle have any data in form of block)
+
+in linux or unix: 
+ps -ef|grep oracle : to show all related file of oracle that are in process.
+
+sqlplus:
+========
+DATA FILES(*.dbf):
+-----------
+select file_name, bytes/1024/1024 "MB"
+from dba_data_files
+order by 1; : to show files name with their size of data base.
+
+select name,creation_time
+from v$datafile; : to show file name with data of creation.
+
+LOG FILES(*.log):
+----------
+select member, status, group# from v#logfile; : to log file with their status and group number
+select group#, sequence#, bytes, archived, status from v$log; : to show all the mention things in command.
+alter database add logfile member 'c:\oracle\product\10.2.0\oradata\orcl\redo01b.log' to group 1; : alternate file added to group 1.but its status is invalid in next step we will valid it.
+alter system switch logfile; : it will redirect the redo log file to alter redo file of above step when first redo file get filled.this statement is run for each new addred redo file separtely.
+alter database {if group name then write here} add logfile ('c:\oracle\product\10.2.0\oradata\orcl\redo04.log','c:\oracle\product\10.2.0\oradata\orcl\redo04b.log') size 50m; : to add complete new redo log file with specific group or to new added group.
+alter database drop logfile group 4; : to drop the group redolog file.
+
+Undo(*.dbf):
+------------
+
+spfile(server process file or init file):
+-----------------------------------------
+show parameter spfile : to show full path of spfile.
+
+oracle_sid=xyz 
+-------------
+//these are the file that oracle check before starting mean initializing file.if any one of them exist then it loads oracale.else not 
+/////////////
+spfilexyz.ora
+spfile.ora
+initxyz.ora
+/////////////
+
+Alter Log(*.lof + trace files(*.trc)):
+-------------------------------------
+alter log files tell us about major events on database when we startup and shutdown etc.
+trace file that use on session level.
+these files are in dump directory.
+
+show parameter background_dump_dest : to show the path of dump directory
+
+control file(*.ctl):
+-------------------
+these file tell about the database file structure.where are different file exist in our system.
+
+select name from v$controlfile : to show path of cotrol file.
+
+
+Backup File:
+-----------
+to backup db.
+
+
+
+Logic Storage Structure:
+========================
+the largest logical structure is "system tablespace" every single database space reisdes inside "system tablespace"
+there are two special table spaces.1) system tablespace. 2) sysaux tablespace. that are going to exist on every single database.
+"system tablespace" : it is use for data dictionary or meta data.its store the whole information about your database.
+"sysaux tablespace" : that is use for auxilary purpose.(in 9i these two are combine)
+we arent suppose to use these tables b/c these are reserved for speciall purpose.
+typical you have user table space.for every user their is its own table space.
+"undo tablespace" that is use to store the default image information about your data in case to use rollback then its there.
+"temp tablespace" is use to sort the data in case of not have enoughe memory space.sorting is very expensive operation.
+every single object in database will be conatin inside the tablespace and only inside of one tablespace unless you are performing
+partitioning that can go in different partion for different table.
+"segment" is the next smallest logical unit.
+if the space of segment table fills up then oracle allocate another area called "extent table".that is not directly attached to
+previous segment. they are in different memory fregment but are linked.
+"database block" is the smallest logical unit,its not exactly mapped to operating sytem logical block it can be of multiple of the os blocks.
+
+PGA(program global area)
+PMON(process monitor)
+SMON(Server monitor)
+
+if redo log file filled up then it use "ARCH log".
+"SHARED POOL" : cache the commands(hashed commands)
+ 

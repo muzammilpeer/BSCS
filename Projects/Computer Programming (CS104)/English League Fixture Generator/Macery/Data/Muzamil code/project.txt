@@ -1,0 +1,39 @@
+
+
+char* team_a[10]
+char*  team_b[10]
+char* stadium[20]
+int time
+char* date
+
+
+one particular match in a week
+
+team_a[1] and team_b[1] match in stadium[1] or stadium[2]
+particluar time for match either time == 5:00pm or time == 8:00pm
+date for match either saturday or sunday or anyother day
+
+
+
+10 matches in a week
+
+team_a[i] and team_b[j] match in stadium[i] or stadium[j] 
+more matches in either saturday or sunday then any one other day
+if saturday matches first time == 5:00pm then time == 8:00pm
+if sunday matches first time == 5:00pm then time == 8:00pm
+anyother day time can be 5:00pm or 8:00pm
+
+
+Matches in a particular month
+using weekly basis for matches but considering date,time and stadium for each match
+
+
+Total matches in schedule
+using monthly basis for matches but considering date and time for each match 
+
+
+
+
+  
+
+

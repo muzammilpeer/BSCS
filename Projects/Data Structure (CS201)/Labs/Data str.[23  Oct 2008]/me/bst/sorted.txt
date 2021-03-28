@@ -1,0 +1,515 @@
+1:67 *  a
+1:39 *  a
+1:39 *  a
+1:15 *  a
+1:15 *  a
+1:14 *  a
+1:10 *  a
+1: 6 *  a
+1: 4 *  a
+1: 1 *  a
+1:68 *  about
+1:12 *  after
+1:30 *  again
+1:28 *  again
+1:23 *  again
+1:22 *  again
+1:33 *  ah!
+1: 2 *  air
+1:65 *  an
+1:74 *  and
+1:66 *  and
+1:63 *  and
+1:61 *  and
+1:61 *  and
+1:60 *  and
+1:55 *  and
+1:55 *  and
+1:53 *  and
+1:49 *  and
+1:48 *  and
+1:47 *  and
+1:46 *  and
+1:41 *  and
+1:36 *  and
+1:36 *  and
+1:35 *  and
+1:35 *  and
+1:34 *  and
+1:30 *  and
+1:23 *  and
+1:18 *  and
+1:13 *  and
+1:12 *  and
+1: 7 *  and
+1: 5 *  and
+1: 3 *  and
+1: 1 *  and
+1:75 *  and,
+1:17 *  and,
+1:58 *  answers
+1:74 *  apart
+1:29 *  arm
+1: 9 *  arms
+1:40 *  artlessness
+1:26 *  as
+1: 8 *  as
+1: 2 *  as
+1: 2 *  as
+1:73 *  at
+1:20 *  at
+1:22 *  back
+1:43 *  backward
+1: 1 *  beautiful
+1:50 *  beauty
+1:73 *  before
+1:40 *  beguiled
+1:70 *  better
+1:51 *  blame
+1:11 *  bower
+1:23 *  boyhood
+1:45 *  boyhood's
+1:16 *  breath
+1:63 *  brethren
+1:12 *  bright
+1:50 *  brought
+1: 7 *  brow
+1: 3 *  brow
+1:32 *  brown
+1: 4 *  by
+1:63 *  calm
+1:48 *  calm,
+1:69 *  can
+1:42 *  can
+1:47 *  care
+1: 4 *  careless
+1:19 *  chain
+1: 7 *  charms
+1:24 *  cheek
+1:39 *  child
+1: 6 *  child
+1:48 *  cold
+1:22 *  come
+1:72 *  common
+1:57 *  creed
+1: 4 *  curl
+1:59 *  dalesman's
+1:61 *  day,
+1:36 *  dear
+1:55 *  deed
+1:47 *  deeper
+1:59 *  derby
+1:12 *  dew-moist
+1:35 *  dewy
+1:56 *  diverge
+1:27 *  doubtful
+1:45 *  dream
+1:81 *  dreams
+1:22 *  dreams,
+1:71 *  dull
+1:72 *  dust
+1:21 *  dust
+1:81 *  early
+1:37 *  ere
+1:68 *  even
+1:17 *  even
+1:16 *  every
+1: 6 *  everything
+1:33 *  eves
+1:37 *  eye
+1:27 *  eye
+1:18 *  eye
+1:73 *  eyes
+1:31 *  eyes
+1: 3 *  eyes
+1:48 *  face
+1:74 *  fall
+1:44 *  feel
+1:29 *  feel
+1:24 *  feel
+1:79 *  feeling
+1:16 *  feeling
+1:80 *  find
+1:15 *  fine-toned
+1:80 *  flow,
+1:14 *  flower
+1:72 *  flowers
+1:35 *  flowers,
+1: 5 *  flowing
+1:52 *  flown
+1:41 *  folly's
+1:71 *  footstep
+1:62 *  for
+1:60 *  for
+1:51 *  for
+1:79 *  founts
+1:80 *  fresh
+1:31 *  fringed
+1:67 *  from
+1:18 *  from
+1:25 *  fulness
+1:63 *  gather,
+1:57 *  genevan's
+1: 1 *  girl
+1: 3 *  glad
+1:24 *  glow
+1:54 *  goodness
+1:49 *  grace
+1:11 *  graceful
+1:47 *  graver
+1:53 *  green
+1: 5 *  hair
+1:39 *  half
+1:39 *  half
+1: 1 *  happy
+1:71 *  has
+1:65 *  has
+1:52 *  has
+1:64 *  hath
+1:37 *  hath
+1:46 *  have
+1:21 *  have
+1:31 *  hazel
+1:28 *  hear
+1:26 *  hear
+1:69 *  heart
+1:25 *  heart
+1:77 *  heart!
+1:15 *  heart,
+1:61 *  holy
+1:13 *  holy
+1:21 *  hopes
+1:42 *  hour
+1:70 *  hours
+1:19 *  how
+1:52 *  humble
+1:67 *  i
+1:42 *  i
+1:29 *  i
+1:28 *  i
+1:26 *  i
+1:24 *  i
+1:65 *  impress
+1:79 *  in
+1:78 *  in
+1:66 *  in
+1:56 *  in
+1:55 *  in
+1:53 *  in
+1:41 *  in
+1:23 *  in
+1:21 *  in
+1:18 *  in
+1:13 *  in
+1:10 *  in
+1: 6 *  in
+1:77 *  indian
+1: 9 *  into
+1:45 *  is
+1:25 *  is
+1:70 *  its
+1:25 *  its
+1:24 *  its
+1:13 *  its
+1:11 *  its
+1:54 *  known
+1:21 *  lain
+1:12 *  leaf
+1:12 *  leaf,
+1:26 *  leaned
+1:35 *  leaves
+1:64 *  left
+1:46 *  left
+1:19 *  lengthening
+1:70 *  lesson
+1:31 *  lids
+1:75 *  lies
+1:76 *  light
+1:10 *  light
+1: 2 *  light
+1:43 *  lights
+1:15 *  like
+1:14 *  like
+1:68 *  lingering,
+1:18 *  lip
+1:23 *  lives
+1:21 *  long
+1:28 *  low
+1:15 *  lute
+1:44 *  manhood's
+1:49 *  manhood,
+1: 4 *  many
+1:80 *  may
+1:64 *  me
+1:48 *  me
+1:23 *  me
+1:62 *  me,
+1:74 *  melt,
+1:11 *  melted
+1:33 *  memories
+1:43 *  memory
+1:20 *  memory,
+1:78 *  mind
+1:10 *  mind
+1:25 *  mine
+1:34 *  moonlit
+1:51 *  more
+1:36 *  more
+1:19 *  more
+1:76 *  morning
+1:14 *  morning
+1:18 *  music
+1:17 *  mute
+1:63 *  my
+1:58 *  my
+1:45 *  my
+1:38 *  my
+1:29 *  my
+1:27 *  my
+1:24 *  my
+1:66 *  myself
+1:52 *  name
+1: 8 *  nature
+1:58 *  need
+1:81 *  not
+1:71 *  not
+1:69 *  not
+1:65 *  not
+1:42 *  o'er
+1:79 *  of
+1:78 *  of
+1:77 *  of
+1:76 *  of
+1:72 *  of
+1:70 *  of
+1:66 *  of
+1:54 *  of
+1:50 *  of
+1:49 *  of
+1:47 *  of
+1:43 *  of
+1:38 *  of
+1:35 *  of
+1:34 *  of
+1:33 *  of
+1:31 *  of
+1:25 *  of
+1:20 *  of
+1:20 *  of
+1:16 *  of
+1: 8 *  of
+1: 5 *  of
+1: 3 *  of
+1:22 *  old
+1:21 *  old
+1:64 *  on
+1:46 *  on,
+1:19 *  once
+1:56 *  one
+1:27 *  or
+1:81 *  our
+1:76 *  our
+1:73 *  our
+1:56 *  our
+1:65 *  out
+1:32 *  overblown
+1:29 *  own
+1:46 *  passed
+1:67 *  past,
+1:72 *  path
+1:56 *  pathways,
+1: 3 *  pearl
+1:50 *  pensive
+1:51 *  perchance,
+1:38 *  picture
+1:44 *  power
+1:51 *  praise
+1:60 *  prayer
+1:60 *  priestly
+1:61 *  psalm
+1:80 *  pure,
+1:53 *  quiet
+1:37 *  quiet
+1:27 *  raised
+1:10 *  rejoicing
+1:28 *  replies
+1:79 *  retain
+1:62 *  reverence
+1: 7 *  ripening
+1:60 *  rite
+1:75 *  round
+1: 7 *  save
+1:52 *  school-boy's
+1:78 *  secret
+1:67 *  see
+1:38 *  see
+1:41 *  seemed
+1: 6 *  seeming
+1:41 *  self
+1:67 *  shadow
+1: 4 *  shadowed
+1:74 *  shadows
+1:62 *  silent
+1:59 *  simple
+1: 9 *  sinking
+1:76 *  skies
+1:63 *  slow
+1: 8 *  smile
+1:42 *  smile,
+1:37 *  smiled
+1:36 *  smiles
+1: 3 *  smiles,
+1:75 *  smiling
+1:32 *  soft
+1:61 *  solemn
+1:66 *  something
+1:26 *  speak
+1:64 *  spirit
+1:58 *  spirit's
+1:18 *  spoke
+1: 8 *  spring
+1:13 *  stainless
+1:35 *  stars
+1: 2 *  step
+1:57 *  sternest
+1:43 *  stream
+1:77 *  summer
+1:33 *  summer
+1: 2 *  summer
+1: 9 *  summer's
+1:33 *  sweet
+1:78 *  sympathies
+1:51 *  than
+1:45 *  than
+1:36 *  than
+1:72 *  that
+1:70 *  that
+1:44 *  that
+1:42 *  that
+1:77 *  the
+1:77 *  the
+1:76 *  the
+1:74 *  the
+1:69 *  the
+1:67 *  the
+1:62 *  the
+1:60 *  the
+1:59 *  the
+1:57 *  the
+1:53 *  the
+1:52 *  the
+1:49 *  the
+1:48 *  the
+1:44 *  the
+1:43 *  the
+1:31 *  the
+1:25 *  the
+1:20 *  the
+1:19 *  the
+1:17 *  the
+1:10 *  the
+1: 8 *  the
+1:66 *  thee
+1:49 *  thee
+1:41 *  thee
+1:26 *  thee
+1:20 *  thee!
+1:60 *  thee,
+1:80 *  their
+1:46 *  their
+1:75 *  them,
+1:36 *  they!
+1:57 *  thine
+1:27 *  thine
+1:53 *  thine,
+1:37 *  this,
+1:55 *  thought
+1:47 *  thought
+1:20 *  thought
+1: 7 *  thoughtful
+1:19 *  thrills
+1:22 *  thronging
+1:75 *  through
+1:11 *  through
+1:73 *  thus,
+1:68 *  thy
+1:64 *  thy
+1:40 *  thy
+1:38 *  thy
+1:37 *  thy
+1:29 *  thy
+1:28 *  thy
+1:65 *  time
+1:71 *  time's
+1:73 *  times
+1:30 *  timidly
+1:72 *  to
+1:58 *  to
+1:49 *  to
+1:38 *  to
+1:27 *  to
+1:26 *  to
+1:36 *  tones
+1:17 *  tongue
+1:42 *  too
+1:46 *  trace
+1:32 *  tresses
+1:59 *  truth
+1: 5 *  unconfined
+1:14 *  unfolding
+1:69 *  unlearn
+1:54 *  unobtrusive
+1:48 *  unto
+1:24 *  upon
+1:30 *  uprise
+1:75 *  us
+1:81 *  vain
+1:45 *  vainer
+1:40 *  very
+1:76 *  warm
+1:17 *  was
+1:34 *  wave
+1:68 *  way
+1:34 *  way
+1:53 *  ways
+1:80 *  we
+1: 8 *  wears
+1:42 *  when
+1:26 *  when
+1:17 *  when
+1: 9 *  when
+1:39 *  when,
+1:62 *  where
+1:79 *  which
+1:21 *  which
+1:11 *  which
+1:15 *  which,
+1:73 *  while
+1:58 *  while
+1:44 *  while
+1:13 *  white
+1:81 *  wholly
+1:69 *  wholly
+1:51 *  wide,
+1:55 *  wider
+1:34 *  willowy
+1:41 *  wise
+1:32 *  with
+1:16 *  with
+1: 3 *  with
+1: 2 *  with
+1:29 *  within
+1:16 *  woke
+1:50 *  woman's
+1:39 *  woman,
+1:71 *  worn
+1:65 *  worn
+1:46 *  years
+1:80 *  yet
+1:71 *  yet
+1:64 *  yet
+1:55 *  yet
+1:44 *  yet
+1:68 *  yet,
+1:56 *  youth
+1:38 *  youth

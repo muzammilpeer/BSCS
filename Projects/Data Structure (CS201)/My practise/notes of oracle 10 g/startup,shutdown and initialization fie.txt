@@ -1,0 +1,78 @@
+in sqlplus:
+==========
+connect / as sysdba : to connect as sysdba
+
+Note: 
+initalizing file of instance is at path "C:\oracle\product\10.2.0\db_1\dbs" 
+name can:
+1)initdw.ora
+2)spfileorcl.ora
+3)
+
+show parameter control_files : to show the path of control files.
+show parameter background : to show the path of background files .
+select status from v$instance : to show in which mode we are in db.
+alter database mount : to mount the db.
+alter database open : to open database for regular use.
+
+
+Note: 
+if the db. status is "started" then it is not mounted.
+
+startup process:
+================
+first unmounted -instance started!
++ (background process + memory structure = instance)
++ mounted-instance is associated w/Database
++ open-datfiles:redo logs are opened db available to everyone.
+
+shutdown process:
+=================
++ close the database
++ unmount the db.
++ shutdown the instance
+
+sqlplus:
+========
+startup restrict; : to startup the db. in retricted mode at where regular user cant connect to db.e.g: scott.
+startup pfile='c:\oracle\product\10.2.0\db_1\dbs\initw.ora'; : to startup db.other way.(use by dataware house)
+show user : to show the user which are login to db.
+select logins from v$instance : to tell either we are connected with restricted mode or other.
+alter system disable retricted_session; : to allow users mean disable the restricted mode and allows anyone.
+alter system suspend; : to go in suspend mode.
+alter system resume : to come back from suspend mode to normal mode.
+shutdown immediate; to show shutdown db. immediately.
+
+Note:
+retricted mode is specially use when we dont want to login anyuser to db.except administrator.
+suspend mode is use for copying file for little time then we resume our database.
+
+
+show parameter spfile; : to show server parameter file path.
+
+to change dynamic parameter:
+============================
+select value,issys_modifiable from v$parameter where name='audit_file_dest' : 
+alter system set audit_file_dest='c:\oracle' scope=spfile : 
+show parameter audit_file_dest : to show audit files path
+select value,issys_modifiable from v$parameter where name='instance_name' : to show that parameter that cant be dynamically change.eig:orcl
+alter system set user_dump_dest='c:\oracle' scope=memory; : to restore the original path of "user_dump_dest".after this command we have to restart our database.
+alter system set background_dump_dest='c:\oracle\product\10.2.0\admin\orcl\bdump' comment='modified by muzammil' : to add comments in "background_dump_dest" file.
+select name, value, update_comment from v$spparameter where name='background_dump_dest'; : to see the comment of the above file.
+
+pfile ->> spfile 
+
+create pfile from spfile; : to create text file from spfile.in windows this file is in "c:\oracle\product\10.2.0\db_1\database", and in linux or unix."c:\oracle\product\10.2.0\db_1\dbs".
+create pfile='c:\oracle\myinit.ora' from spfile : to create your own filename at where you want.
+
+
+spfile ->> pfile 
+first shutdown immediate then:
+create spfile='c:\oracle\myspfile.ora' from pfile='c:\oracle\myinit.ora'
+
+Data Dictionary Views:
+=====================
+
+
+
+

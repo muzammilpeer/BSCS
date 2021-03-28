@@ -1,0 +1,8 @@
+C:\Users\Muzammil Peer\Documents\Visual Studio 2008\Projects\File Watcher new\File Watcher new\bin\Debug\File Watcher new.exe
+C:\Users\Muzammil Peer\Documents\Visual Studio 2008\Projects\File Watcher new\File Watcher new\bin\Debug\File Watcher new.pdb
+C:\Users\Muzammil Peer\Documents\Visual Studio 2008\Projects\File Watcher new\File Watcher new\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Muzammil Peer\Documents\Visual Studio 2008\Projects\File Watcher new\File Watcher new\obj\Debug\File_Watcher_new.Form1.resources
+C:\Users\Muzammil Peer\Documents\Visual Studio 2008\Projects\File Watcher new\File Watcher new\obj\Debug\File_Watcher_new.Properties.Resources.resources
+C:\Users\Muzammil Peer\Documents\Visual Studio 2008\Projects\File Watcher new\File Watcher new\obj\Debug\File Watcher new.csproj.GenerateResource.Cache
+C:\Users\Muzammil Peer\Documents\Visual Studio 2008\Projects\File Watcher new\File Watcher new\obj\Debug\File Watcher new.exe
+C:\Users\Muzammil Peer\Documents\Visual Studio 2008\Projects\File Watcher new\File Watcher new\obj\Debug\File Watcher new.pdb

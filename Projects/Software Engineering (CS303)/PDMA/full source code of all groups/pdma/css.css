@@ -1,0 +1,169 @@
+.MainBorder {
+	border: thin solid #367ca6;
+}
+.Heading {
+	font-family: "Cooper Black";
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.WelcomeHeading {
+	font-family: "Cooper Black";
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #263975;
+	text-decoration: none;
+}
+.FooterLinks {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+TextBlue {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #263975;
+	text-decoration: none;
+}
+.WelcomeText {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #263975;
+	text-decoration: none;
+}
+.MainMenu {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.TextField {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #367ca6;
+	text-decoration: none;
+	height: 20px;
+	width: 150px;
+	border: thin solid #367ca6;
+}
+.Login {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	border: thin dotted #263975;
+	background-color: #367ca6;
+	height: 18px;
+	width: 50px;
+}
+.SubHeading {
+	font-family: Tahoma;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #263975;
+}
+.CopyrightText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #7f7f7f;
+	text-decoration: none;
+}
+.InsidePageHeading {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-decoration: underline;
+	color: #263975;
+}
+.Text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #90b8c8;
+	text-decoration: none;
+}
+.TextField2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 20px;
+	width: 250px;
+	text-decoration: none;
+	border: thin solid #367ca6;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #367ca6;
+}
+.TextArea1 {
+	border: thin solid #367ca6;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #367ca6;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	width: 250px;
+}
+.List {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #367ca6;
+	text-decoration: none;
+	list-style-position: inside;
+	list-style-type: disc;
+	width: 100px;
+}
+.TableBorder {
+	border: thin dotted #367ca6;
+}
+.TableTextnBorder {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #367ca6;
+	text-decoration: none;
+	border: thin dotted #367ca6;
+}

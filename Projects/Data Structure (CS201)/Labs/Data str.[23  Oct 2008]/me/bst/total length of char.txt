@@ -1,0 +1,3 @@
+584 is allowed for this program.
+due to link list.
+total number of lines is 17.

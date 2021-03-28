@@ -1,0 +1,35 @@
+.net platform(collection of technology)
+->(inheritance)
+
+.net framework->> 
+1->(inheritance)(parts of framework)
+common language run time(CLR)
+2->languages
+3->class libraries
+
+->(inheritance)
+Enterprise servers(like: sql server,biztalk,exchange server)
+->(inheritance)
+Development Environment(like: Visual studio)
+
++++++ 	-----------------------------	++++++
+
+CLR->> the engine that drive .net frame work
+- reponsible for Garbage connection(process that run and manage resources and memory)
+CLR has a: 
+- class class loader
+- code manager(Garbage collection)
+- bultin security engine
+- debugger
+- type checker
+- exception handling manager
+- supports muti thread
+- COM
+- base class library
+
+-----------------------------------------
+
+lecture #1 ends HERE...
+
+-----------------------------------------
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+    <!-- Name of the Module -->
+        <name>Hello World - Hello</name> 
+ 
+    <!-- Name of the Author -->
+        <author>Group C-10</author> 
+ 
+    <!-- Version Date of the Module -->
+        <creationDate>2010-04-18</creationDate> 
+ 
+    <!-- Copyright information -->
+        <copyright>All rights reserved 2010.</copyright> 
+ 
+    <!-- License Information -->
+        <license>GPL 2.0</license> 
+ 
+    <!-- Author's email address -->
+        <authorEmail>k070024@nu.edu.pk</authorEmail> 
+ 
+    <!-- Author's website -->
+        <authorUrl>www.nu.edu.pk</authorUrl> 
+ 
+    <!-- Module version number -->
+        <version>1.0.0</version> 
+ 
+    <!-- Description of what the module does -->
+        <description>Provides a basic "Hello World" notice</description>
+ 
+    <!-- Listing of all files that should be installed for the module to function -->
+        <files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+                <filename module="mod_form1">mod_form1.php</filename>
+                <filename>index.html</filename>
+        </files>
+ 
+    <!-- Optional parameters -->
+        <params />
+</install>

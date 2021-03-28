@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install type="plugin" group="content" version="1.5">
+         <name>Content - Picture Cube Plugin</name>
+         <author>Nguyen Hoang Viet</author>
+         <creationDate>Oct 8st, 2009</creationDate>
+         <copyright>This extension in released under the GNU/GPL License - http://www.gnu.org/copyleft/gpl.html</copyright>
+         <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+         <authorEmail>email2@luyenkim.net</authorEmail>
+         <authorUrl>www.luyenkim.net</authorUrl>
+         <version>1.0.1</version>
+	<description><![CDATA[
+	 3D rotate images. Using: {picturecube}{/picturecube}, or {picturecube width="450" hight="350" cubesize="200"}img_1_link|img_2_link|img_3_link|img_4_link|img_5_link|img_6_link{/picturecube}. This plugin is based on 3d Rotating Image Cube at http://www.bezzmedia.com/swfspot/ . Example: {picturecube}http://vatlieu.us/plugins/content/plg_picturecube/picturecube06.jpg|http://vatlieu.us/plugins/content/plg_picturecube/picturecube01.jpg|http://vatlieu.us/plugins/content/plg_picturecube/picturecube02.jpg|http://vatlieu.us/plugins/content/plg_picturecube/picturecube03.jpg|http://vatlieu.us/plugins/content/plg_picturecube/picturecube04.jpg|http://vatlieu.us/plugins/content/plg_picturecube/picturecube05.jpg{/picturecube}.
+	 ]]>
+	</description>
+	<files>
+          <filename plugin="plg_picturecube">plg_picturecube.php</filename>
+          <filename>plg_picturecube/plg_picturecube.swf</filename>
+          <filename>plg_picturecube/picturecube01.jpg</filename>
+          <filename>plg_picturecube/picturecube02.jpg</filename>
+          <filename>plg_picturecube/picturecube03.jpg</filename>
+          <filename>plg_picturecube/picturecube04.jpg</filename>
+          <filename>plg_picturecube/picturecube05.jpg</filename>
+          <filename>plg_picturecube/picturecube06.jpg</filename>
+	</files>
+         <params>
+	 <param name="enabled" type="radio" default="1" label="Enable Plugin" description="Enable pr Disable Plugin">
+		<option value="0">No</option>
+		<option value="1">Yes</option>
+	 </param>
+		<param name="src" type="text" default="http://vatlieu.us/plugins/content/plg_picturecube/picturecube06.jpg|http://vatlieu.us/plugins/content/plg_picturecube/picturecube01.jpg|http://vatlieu.us/plugins/content/plg_picturecube/picturecube02.jpg|http://vatlieu.us/plugins/content/plg_picturecube/picturecube03.jpg|http://vatlieu.us/plugins/content/plg_picturecube/picturecube04.jpg|http://vatlieu.us/plugins/content/plg_picturecube/picturecube05.jpg" label="Image URL" description="Type in 6 full URLs like http://www.abc.com/x.jpg, separated by '|'" />
+		<param name="width" type="text" default="450" label="Frame Width" description="Type in the width of your frame in pixels or %." />
+		<param name="height" type="text" default="350" label="Frame Height" description="Type in the height of your frame in pixels." />
+		<param name="cubesize" type="text" default="200" label="Cube Size" description="Type in the margin width of your frame in pixels." />
+	</params>
+</install>

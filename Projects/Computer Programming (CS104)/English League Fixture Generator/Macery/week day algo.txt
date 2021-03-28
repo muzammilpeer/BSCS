@@ -1,0 +1,51 @@
+6
+8
+8/4=2
+1
+29
+
+6+8+2+1+29=46
+
+Finally, let's try June 19, 2054
+
+Look up the 2000s in the centuries table: 6 
+Note the last two digits of the year: 54 
+Divide the 54 by 4: 54/4 = 13.5 and drop the fractional part: 13 
+Look up June in the months table: 4 
+Add all numbers from steps 1-4 to the day of the month (in this case, 19): 6+54+13+4+19=96. 
+Divide the sum from step 5 by 7 and find the remainder: 96/7=13 remainder 5 
+Find the remainder in the days table: 5=Friday. 
+
+[edit] Centuries table
+1700-1799     4     (Still Julian Calendar in Great Britain and its colonies until 1752)    
+1800-1899     2
+1900-1999     0
+2000-2099     6
+2100-2199     4
+2200-2299     2
+2300-2399     0
+2400-2499     6
+2500-2599     4
+
+[edit] Months table
+January      0 (in leap year 6)
+February     3 (in leap year 2)
+March        3
+April        6
+May          1
+June         4
+July         6
+August       2
+September    5
+October      0
+November     3
+December     5
+
+[edit] Days table
+Sunday    0
+Monday    1
+Tuesday   2
+Wednesday 3
+Thursday  4
+Friday    5
+Saturday  6

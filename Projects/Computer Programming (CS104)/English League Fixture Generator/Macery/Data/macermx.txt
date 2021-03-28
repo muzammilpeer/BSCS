@@ -1,0 +1,290 @@
+#include <iostream>
+#include <fstream>
+#include <graphics.h>
+#include <iomanip>
+using namespace std;
+int a_s[20];
+char* group_a[10];
+char* group_b[10];
+int error[20];
+int number;
+bool check,check1;
+int i,j,k;
+int counter;
+void scan()
+{
+     for (i=0;i<20;i++)
+             {
+                      for (j=0;j<i;j++)
+                      {
+                           if (a_s[i]==a_s[j])
+                           {
+                             check=false;
+                             error[k]=i;
+                            }
+                      }
+                      if (check==false)
+                      k++;
+         //    cout<<"Check"<<i<<" == "<<check<<endl;
+             check=true;
+             }       
+}
+void display()
+{
+  for (int i=0;i<20;i++)
+                {
+   //                 cout<<"Randomized Array :"<<a_s[i]<<endl;
+                }   
+}
+int error_func()
+{counter=0;
+                for (int i=0;i<k;i++)
+                {
+     //               cout<<"Error in Index "<<error[i]<<endl;
+                    counter++;
+                }
+       //         cout<<"Counter : "<<counter<<endl;
+                return counter;
+}
+int again_error()
+{ 
+k=0;
+scan();
+counter=0;
+return error_func();
+}
+void re_gen()
+{int temp;
+     for (int r=0;r<counter;r++)
+                {
+                    temp=error[r];
+                    a_s[temp]=rand()%20+1;
+                    
+                }
+}
+
+//--------------------Lakir hai maat hatana warna massala hai.--------------------
+class schedule 
+{
+      protected:
+        struct checks
+      {
+             bool check[20][2];//check[20][0]is home check while [1] is away check
+      }c1[20],c2[20];// becuase of two times this happens in a year
+      struct info
+      {
+             char* team_name[20];//20 teams
+             char* stadium_name[20];//20 stadiums
+      }in;
+      struct week_information
+      {
+             info in;
+      }in1;
+      public:
+      
+             //-------------------constructor------------------------//
+             schedule()
+             {
+             int i=0;
+             //load data to struct through default constructor
+                   //-----------------initializing checks to false ----------------
+                   //-----------------they don't play any match initially----------
+                  for (int i=0;i<20;i++)
+                  {
+                      for (int j=0;j<20;j++)
+                      {
+                      c1[i].check[j][0]=false;
+                      c1[i].check[j][1]=false;
+                      c2[i].check[j][0]=false;
+                      c2[i].check[j][1]=false;
+                      }
+                  } 
+             }
+             //----------------[/]constructor-----------------//
+             void load_data_to_file()
+             {int i=0;
+             ifstream tn ("include/team_name.txt");
+                  ifstream sn ("include/stadium_name.txt");
+                  while(!tn.eof() && !sn.eof())
+                  {
+                  in.team_name[i]=new (char[25]);
+                  tn.getline(in.team_name[i],25,'\n');
+                  in.stadium_name[i]=new (char[40]);
+                   sn.getline(in.stadium_name[i],40,'\n');
+                 //  cout<<in.team_name[i]<<endl;
+                   //cout<<in.stadium_name[i]<<endl<<endl;
+                  i++;
+                  }
+                  tn.close();
+                  sn.close();
+                  }
+             int func(int temp1,int temp2)
+             {
+                 // if (curr_month is >7)
+                  if (c1[temp1].check[temp2][0]==false)
+                  {
+                   c1[temp1].check[temp2][0]=true;
+                   c1[temp2].check[temp1][1]=true;
+                   return temp1;
+                  }
+                  else if (c1[temp1].check[temp2][1]==false)
+                  {
+                       c1[temp1].check[temp2][1]=true;
+                       c1[temp2].check[temp1][0]=true;
+                       return temp2;
+                   }
+                   else return 25;
+             }
+             //---------------------------error deduction and generation of randome number--------//
+                          //--------------------main codeing section--------------------------///
+            /* int stadium_selection(int temp1,int temp2)
+             {
+             int fun;//fucntion retunr value;
+               fun=func(temp1,temp2);
+               if (fun<21)
+              cout<<in.stadium_name[fun]<<endl;
+              return fun;
+              }
+              */
+              void check_load()
+              {
+                   for (int i=0;i<20;i++)
+                  {
+                      for (int j=0;j<20;j++)
+                      {
+                       cout<<c1[i].check[j][0];
+                       cout<<c1[i].check[j][1];
+                       cout<<c2[i].check[j][0];
+                       cout<<c2[i].check[j][1];
+                      }
+                  } 
+                  }
+                  void error_stadium()
+                  {
+                       
+                  }
+              virtual void generate_rand_number()
+              {
+              }
+              virtual void team_selection()
+              {
+               }
+               
+               /*void display()
+               {int j=0;
+                   for (int i=0;i<10;i++)
+                   {
+                       cout<<in.team_name[a_s[i]]<<setw(20)<<in.team_name[a_s[j]]<<endl;
+                       j++;
+                       }
+               }*/
+               virtual void generate()
+               {
+                }
+                void show_rdata()
+                {
+                     for (int i=0;i<20;i++)
+                     cout<<a_s[i];}
+                           
+                         /* virtual */void stadium_name(int t)
+                           {
+                                cout<<in.stadium_name[t]<<endl;
+                            }
+};
+
+class week_basis:public schedule
+{
+      public:
+             void generate_rand_number()
+             {
+             int number;
+             check=true;
+             int i,j,k;
+             for (i=0;i<20;i++)
+             {
+                 cout<<a_s[i]<<endl;
+                 a_s[i]=rand()%20+1;
+             }
+             k=0;
+             scan();
+             error_func();
+             re_gen();
+                //k=0;counter=0;
+                display();
+                int loop=again_error();
+                while(loop!=0)
+                {
+                 loop=again_error();
+                 re_gen();
+                 }
+                 schedule::show_rdata();
+              }
+              
+          /*    void stadium_name(int t)
+              {
+               schedule::stadium_name(t);   
+               }
+            */  void team_selection()
+                {
+                   load_data_to_file();
+                   generate_rand_number();
+                   int fun;
+                   int j=10;
+                   int l=0;
+                   int temp1,temp2;
+                   for (int i=0;i<10;i++)
+                   {
+                   temp1=a_s[i];
+                   temp2=a_s[j];
+                   cout<<temp1<<setw(20)<<temp2<<endl;
+                   fun=func(temp1,temp2);
+                   cout<<"fun"<<endl;
+                   while(fun>21)
+                   {
+                     if (temp2==l)
+                     l++;
+                     temp2=a_s[l];
+                     fun=func(temp1,temp2);
+                     l++;
+                   }
+                   cout<<in.stadium_name[fun]<<endl;
+                   cout<<"fun "<<fun<<endl<<endl;
+               // fun=schedule::stadium_selection(temp1,temp2);
+                //cout<<fun<<endl;
+                   j++;
+                    }
+                    }
+      void generate()
+      {
+      //team_selection();     
+       cout<<in.stadium_name[4];//stadium_name(5);
+       }
+            
+};
+
+int main ()
+{
+    system("color 17");
+    schedule* s1;
+    s1=new(week_basis);
+   int t=0;
+   // while (t!=10){
+    //s1->check_load();
+    s1->show_rdata();
+    s1->generate_rand_number();
+   while (t!=2){
+    s1->team_selection();t++;}
+   
+    //s1->show_rdata();
+   s1->generate();
+    //s1->check_load();
+    //s1->generate();
+   // t++;
+   // }
+  //  s1->tata();
+    //s1=new(week_basis);
+    //s1->stadium_selection();
+    //initwindow(800,600);
+    system("pause");
+    return 0;
+}

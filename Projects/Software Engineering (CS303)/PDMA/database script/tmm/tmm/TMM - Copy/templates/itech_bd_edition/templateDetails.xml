@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
+	<install version="1.5" type="template">
+		<name>itech_bd_edition</name>
+		<creationDate>20/04/2009</creationDate>
+		<author>iTech System</author>
+		<authorEmail>itech_inc@yahoo.com</authorEmail>
+		<authorUrl>http://i-tech-system.com</authorUrl>
+		<copyright>iTech System</copyright>
+		<version>1.0.0</version>
+		<license>Free</license>
+		<description>1st joomla! 1.5.X template from iTech System</description>
+			<files>
+				<filename>index.php</filename>
+				<filename>templateDetails.xml</filename>
+				<filename>template_thumbnail.png</filename>
+				<filename>css/typography.css</filename>
+				<filename>css/template.css</filename>
+				<filename>css/joomla.css</filename>
+				<filename>css/navigation.css</filename>
+				<filename>modules/modules.php</filename>
+				<filename>html/mod_login/default.php</filename>
+				<filename>html/mod_login/index.html</filename>
+				<filename>html/mod_search/default.php</filename>
+				<filename>html/mod_search/index.html</filename>
+				<filename>js/jquery-1.2.6.min.js</filename>
+				<filename>images/button_bg.png</filename>
+				<filename>images/index.html</filename>
+				<filename>images/lost_password.png</filename>
+				<filename>images/lost_username.png</filename>
+				<filename>images/password_bg.png</filename>
+				<filename>images/registration.png</filename>
+				<filename>images/search.png</filename>
+				<filename>images/username_bg.png</filename>
+				<filename>demo/app.png</filename>
+				<filename>demo/flash.png</filename>
+				<filename>demo/psd.png</filename>
+				<filename>demo/web.png</filename>
+				<filename>params.ini</filename>
+				</files>
+			<positions>
+				<position>top</position>
+				<position>left</position>
+				<position>right</position>
+				<position>login</position>
+				<position>search</position>
+			</positions>
+			<params>
+				<param name="title" type="text" default="Title" label="Header Title" description="Header Title" />
+				<param name="slogan" type="text" default="your slogan here...." label="Slogan" description="Site Slogan" />
+				<param name="showslide" type="list" default="show" label="Show/Hide slideshow" Description="Show or Hide Slideshow on the frontpage">
+					<option value="show">Show</option>
+					<option value="hide">Hide</option>
+				</param>	
+				<param name="slideshowpath" type="text" default="templates/itech_bd_edition/demo" label="Image Gallery path" description="Image gallery path" />
+			</params>
+	</install>		
+				

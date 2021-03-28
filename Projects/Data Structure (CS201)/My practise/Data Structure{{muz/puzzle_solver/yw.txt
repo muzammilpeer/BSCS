@@ -1,0 +1,35 @@
+15 15
+c	s	l	f	y	c	a	s	t	l	e	k	k	c	n
+v	h	q	i	w	e	r	t	y	m	u	s	e	u	m
+b	y	u	u	b	i	o	p	a	o	s	d	f	f	g
+d	u	c	r	v	r	b	n	m	s	l	k	a	j	h
+s	z	j	q	c	w	a	e	r	q	t	y	c	u	i
+x	f	f	a	g	h	h	r	j	u	k	l	p	o	s
+a	g	h	r	y	o	u	i	y	e	q	m	q	o	t
+h	s	d	f	t	t	j	j	q	a	o	u	w	p	o
+o	q	w	f	e	e	h	t	a	y	e	i	s	y	r
+s	c	h	o	o	l	q	n	d	g	e	d	d	t	e
+p	v	h	r	d	y	t	r	h	f	s	a	x	r	n
+i	f	a	t	n	t	n	a	r	u	a	t	s	e	r
+t	d	o	d	q	g	j	b	i	e	f	s	f	r	j
+a	d	o	g	a	p	k	l	p	s	v	d	f	d	o
+l	a	s	i	f	b	n	m	l	e	l	p	m	e	t
+
+17
+barn
+cafe
+church
+hospital
+hotel
+library
+mosque
+museum
+restaurant
+school
+stadium
+store
+temple
+pagoda
+castle
+fort
+asif

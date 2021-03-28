@@ -1,0 +1,372 @@
+===================================
+FINITE AUTOMATA (regular languages)
+===================================
+Notes from: Automata Theory, Languages, and Computation
+
+A finite automaton has a set of states and
+
+ - a control which moves from state to state in response to
+   external input
+
+   -- This control may be:
+
+      (a) deterministic (DFA)
+
+       - the automaton cannot be in >1 state at a time
+
+      (b) non-deterministic (NFA)
+
+       - the automaton may be in several states at once
+
+Any lang that can be "recognized" using an NFA can also be
+recognized using a DFA.
+
+====================================
+Deterministic Finite Automata (DFAs)
+====================================
+On each input symbol, there is exactly one state to which the
+automaton can transfer from its current state.
+
+Consists of:
+
+ Q:	a finite set of states
+
+ SIGMA:	a finite set of input symbols
+
+ DELTA:	a transition function
+
+  DELTA: { Q } x { SIGMA } ---> { Q }
+
+  - takes a state and an input symbol
+  - returns a state
+
+ S:	a start state (q_0 in Q)
+
+ F:	a set of accepting states; F is a subset of Q
+
+The language of a DFA: the set of strings that DFA accepts
+----------------------
+
+How a DFA processes strings:
+----------------------------
+Start DFA in q_0; transition to state S given input symbol a_0
+according to:
+
+ DELTA( q_0, q_0 )
+
+...and so on with each input symbol in the string.
+
+Extended transition function: DELTA_HAT
+
+ - takes a state q and a string w and returns a state p which
+   is the state the automaton reaches when starting in state
+   q and processing the sequence of inputs w
+
+Define DELTA_HAT by induction on the length of the string
+---------------------------------------------------------
+Basis: 	DELTA_HAT( q, epsilon ) = q
+
+ - if we are in state q and read no inputs, we are still in
+   state q
+
+Induct:	w = xa	
+
+ - x: string consisting of all but the last symbols of w
+
+ - a: the last symbol of w
+
+ Then DELTA_HAT( q, w ) = DELTA( DELTA_HAT( q, x ), a )
+
+  - assume that DELTA_HAT( q, x ) is correct...
+
+  - then we take the output state of that calc and process
+    input symbol "a" from that output state to get the
+    DELTA_HAT for q, w
+
+-----------------------
+The language of a DFA A
+-----------------------
+
+ L( A ) = { w | DELTA_HAT( q_0, w ) is in F } 
+
+========================================
+Non-deterministic Finite Automata (NFAs)
+========================================
+Have a finite set of states
+     a finite set of input symbols
+     one start state
+     one set of accepting states
+     a transition function DELTA
+
+The only difference b/n this and a DFA is that the NFA
+transition function may return a *set* of states - 
+including the empty state...
+
+ - so clearly every DFA is immediately an NFA - just one
+   whose transition function always returns a singleton
+
+NFA input processing
+--------------------
+Start in start state.
+If receive an input symbol that corresponds to multiple transitions,
+ fork for each such transition and continue a cloned NFA at each
+ transition target state (having consumed that input symbol)
+
+If in a state and receive an input symbol for which there is no
+ transition, this NFA dies
+
+If at the end of receiving input, at least one NFA is in an ACCEPT
+ state, accept the string; else, reject it.
+
+-------------------------------------------------------
+The extended transition function for an NFA (DELTA_HAT)
+-------------------------------------------------------
+Basis:	DELTA_HAT( q, epsilon ) = { q } 	// as before
+
+ (note that we're not considering NFAs with epsilon transitions yet)
+
+Inductive step: w = xa as before
+
+ DELTA_HAT( q, x ) = { p_1, p_2, .., p_k }
+
+  - the set of states we transition to from state q on input x
+
+ Then we look at each state p_i and the output of the transition
+ function for p_i on input "a" ... and take the union of all of 
+ these. It stands to reason that if on input x from state q, we
+ could end up at states p_1, ..., p_k then we take input "a"
+ at each of those states, the union over all of those transition
+ targets is the value of the extended transition function for
+ an NFA on input xa.
+
+ UNION (for i = 1 to k) of DELTA( p_i, a ) = { r_1, r_2, ..., r_m }
+
+ Then DELTA_HAT( q, w ) = { r_1, r_2, ..., r_m }
+
+------------------------
+The language of an NFA A
+------------------------
+L(A) = { w | DELTA_HAT( q_0, w ) INTERSECT F != {} }
+
+ - the intersection between the set of output states obtained from
+   the extended transition function starting at the start state and
+   processing input w AND the set of accepting states (F) is not
+   the empty set
+
+==========================
+Equivalence of DFA and NFA
+==========================
+Proof that DFAs can do whatever NFAs can do: via subset construction
+
+Subset construction:
+--------------------
+ - the basic idea is that we'll have some state S (starting with the
+   start state of the NFA)
+
+ - we'll create a new subset T that contains all the states that S can
+   transition to (in the NFA) on some input symbol x
+
+   -- we do this for all input symbols on which there is a transition
+      out of S
+
+   -- optionally, we can explicitly create a "die" state and draw an
+      edge from S to this "die" state and label that edge with each
+      input symbol y for which there is *no* transition out of S
+
+      -- the die state is non-accepting and will have a self loop 
+         labeled with every symbol in the input alphabet
+
+ - recurse on the newly created subsets, { T } 
+
+ - Then, a subset is an accepting state if it contains at least one
+   state that is in F.
+
+ The above is the lazy or on-demand way of constructing subsets. We
+ could alternatively create all possible subsets, which is the power
+ set of Q.
+
+------------------------------------------
+Non-lazy approach to NFA-to-DFA conversion
+------------------------------------------
+NFA N = ( Q_N, SIGMA, DELTA_N, q_0, F_N )
+
+We'll construct DFA D = ( Q_D, SIGMA, DELTA_D, { q_0 }, F_D ).
+
+ Q_D is the power set of Q_N; i.e. Q_D contains all of the possible
+ subsets of the states of Q_N. So |Q_D| = 2^n where |Q_N| = n
+
+ SIGMA is the same as is the start state.
+
+ F_D is all subsets of states that contain at least one state in F_N
+
+ Then the transition function is as follows:
+ -------------------------------------------
+ For each state S in Q_N and for each input symbol x in SIGMA,
+
+   DELTA_D( S, x ) = UNION (over p in S) of DELTA_N( p, x )
+
+   --> Recall that the states in D are actually subsets of states.
+
+   --> So DELTA_D takes a subset of states and an input symbol
+       and returns another subset of states where the output 
+       subset contains all states that N will transition to from
+       state p on input x (for each state p in the subset S)
+
+----
+Thm:
+----
+If D = ( Q_D, SIGMA, DELTA_D, { q_0 }, F_D ) is the DFA constructed
+from NFA N = ( Q_N, SIGMA, DELTA_N, q_0, F_N ) by subset construction
+then L(D) = L(N).
+
+------------------
+Proof by induction
+------------------
+Basis:	Let |w| = 0; i.e. w = epsilon
+
+ then DELTA_HAT_D( q_0, epsilon ) = { q_0 } and
+      DELTA_HAT_N( q_0, epsilon ) = { q_0 }
+
+Inductive step:
+
+ Let w be of length (n+1) and assume the statement for length n.
+
+ w = xa
+
+ By the inductive hypothesis,
+
+   DELTA_HAT_D( { q_0 }, x ) = DELTA_HAT_N( q_0, x )
+
+ Let both of these sets be: { p_1, p_2, ..., p_k }
+
+ Then, 
+
+  DELTA_HAT_N( q_0, w ) = UNION (for i = 1 to k) of DELTA_N( p_i, a )
+
+   -- we can get the value of the extended transition function for 
+      input state of the start state and input string w by
+
+      (1) figure out all states we can get to from the start state
+          on input x ( w = xa )
+
+      (2) figure out all states we can get to from the set in (1)
+          on input a
+
+      (by definition)
+
+  and -- by subset construction --
+
+  DELTA_D( { p_1, p_2, ..., p_k }, a ) = 
+
+     UNION (for i = 1 to k) of DELTA_N( p_i, a )
+
+  and DELTA_HAT_D( { q_0 }, w ) 
+
+        = DELTA_D( DELTA_HAT_D( { q_0 }, x ), a )
+
+        = DELTA_D( { p_1, ..., p_k }, a )
+
+        = UNION (for i = 1 to k) of DELTA_N( p_i, a )
+
+  Ergo, DELTA_HAT_D( { q_0 }, w ) = DELTA_HAT_N( q_0, w ).
+
+------------------------
+The pigeonhole principle
+------------------------
+If you have more pigeons than holes then some hole must contain >1 pigeon.
+
+ - relies on the number of pigeonholes being finite
+
+----------------------------------
+A bad case for subset construction
+----------------------------------
+I.e. "where the # of states in a DFA equivalent to an NFA blows up"
+
+NFA N accepts all binary strings such that the n'th symbol from the last is 1.
+
+ - needs (n+1) states
+
+ - a forked NFA in this case only continues if the n'th symbol ago was 1
+
+An equivalent DFA by contrast must be able to handle all bitstrings of
+length (n+1) ... there are 2^n bitstrings of length n
+
+ - if there were fewer than 2^n states, then there would be some state q
+   such that the DFA can be in q after reading two different sequences of
+   n bits:
+
+	a_1 a_2 ... a_n		and
+	b_1 b_2 ... b_n
+
+ - since the sequences are different there must be some position at which
+   their values differ; say a_i != b_i
+
+ - suppose a_i = 1 and b_i = 0
+
+ - if ( i == 1 ) then q must be both an accepting an a non-accepting
+   state since
+
+     	1 a_2 ... a_n		is accepted but
+
+	0 b_2 ... b_n		is not accepted
+
+ - if ( i > 1 ) then consider the state p that D enters after reading (i-1)
+   zeroes. 
+
+       a_i a_(i+1) a_(i+2) ... a_n 0 0 ... 0 	// ( i - 1 ) zeroes
+
+       b_i b_(i+1) b_(i+2) ... b_n 0 0 ... 0	// ditto
+
+   Then we have (due to above assumption):
+
+ 	1 a_(i+1) a_(i+2) ... a_n 0 0 ... 0 	is accepted
+ 
+        0 b_(i+1) b_(i+2) ... b_n 0 0 ... 0	is not accepted
+
+   Then state p (by the same logic) must be both accepting and non accepting.
+
+----------------------------------------
+Finite automata with epsilon transitions
+----------------------------------------
+Extend NFAs to also allow transitions on epsilon, the empty string.
+
+ - NFA allowed to make a transition "spontaneously" -- without having
+   consumed an input symbol.
+
+Doesn't have any effect on the class of languages that can be recognized
+by an NFA/DFA.
+
+Epsilon-NFAs: NFAs with epsilon transitions
+
+ - closely related to regular expressions which use the * notation
+
+Modifying the transition function DELTA
+---------------------------------------
+ - DELTA takes as arguments: a state in Q and a member of SIGMA UNION epsilon
+
+Epsilon closures -- ECLOSE( state )
+-----------------------------------
+We perform epsilon closure of a state q by following all transitions out 
+of q that are labeled with epsilon. We then recursively take the epsilon 
+closure of each state reached in this way and add those to ECLOSE(q).
+
+DELTA_HAT( q, epsilon ) = ECLOSE( q )
+
+Then the extended transition is defined as follows:
+----------------------------------------------------
+ DELTA_HAT( q, w ) :	// w = xa
+
+  (1) Let { p_1, p_2, ..., p_k } be DELTA_HAT( q, x )
+
+  (2) UNION (for i = 1 to k) of DELTA( p_i, a ) = { r_1, r_2, ..., r_m }
+
+  (3) DELTA_HAT( q, w ) = ECLOSE( { r_1, r_2, ..., r_m } )
+
+-------------------------------
+Eliminating epsilon transitions
+-------------------------------
+Given any epsilon-NFA E, we can find a DFA D that accepts the same language as E.
+
+ - similar to subset construction
+
+ - but with added step of taking ECLOSE

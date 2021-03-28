@@ -1,0 +1,13 @@
+
+Resolving ORACLE ERROR:ORA-28000: the account is locked
+
+After installation of Oracle10g, there was a problem ..couldnt login using SQL+. None of the accounts(scott/tiger) worked . At last a quick web search gave the solution . Here is what it is:
+
+From your command prompt, type
+sqlplus "/ as sysdba"
+
+Once logged in as SYSDBA, you need to unlock the SCOTT account
+SQL> alter user scott account unlock;
+SQL> grant connect, resource to scott;
+
+
